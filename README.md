@@ -6,11 +6,25 @@ My dotfiles repo.
 Contents
 --------
 
+0. Softwares to use
 1. kitty
 2. Neovim
 3. bat
 4. ptpython
 5. wezterm
+
+Softwares to use
+----------------
+
+A list of some softwares that I prefer using:
+
+* [starship](https://starship.rs) for shell prompt
+* [lsd](https://github.com/Peltoche/lsd) as an alternative of `ls`
+* [bat](https://github.com/sharkdp/bat) as an alternative of `cat`
+* [ripgrep](https://github.com/BurntSushi/ripgrep) as an alternative of `grep`
+* [kitty](https://sw.kovidgoyal.net/kitty/) as a terminal emulator (so far the best!)
+* [neovim](https://neovim.io) as a default editor
+* [ptpython](https://github.com/prompt-toolkit/ptpython) as a better interactive python
 
 Kitty
 -----
@@ -43,3 +57,8 @@ Neovim
 ### Plugins
 
 Use [vim-plug](https://github.com/junegunn/vim-plug) for management of plugins (mostly colorschemes)
+
+ptpython
+--------
+
+Since some default setting is not for me, so put the custom config
