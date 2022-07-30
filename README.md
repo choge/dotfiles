@@ -17,8 +17,8 @@ Kitty
 
 ### Fonts
 
-* Use [Input Mono](https://input.djr.com)
-  * `kitty list-fonts` shows different font names, but the correct one seems 'Input Mono' (shown on Mac), not 'InputMono' (shown on Ubuntu)
+* Use [Victor Mono](https://rubjo.github.io/victor-mono/)
+  * Although [Input Mono](https://input.djr.com) is also really nice, it has removed the ligature at some point.
 
 ### Layout
 
@@ -36,3 +36,10 @@ Added the following config since my mouse scrolls really slowly on Ubuntu.
 ```
 touch_scroll_multiplier 10.0
 ```
+
+Neovim
+------
+
+### Plugins
+
+Use [vim-plug](https://github.com/junegunn/vim-plug) for management of plugins (mostly colorschemes)
