@@ -2,9 +2,9 @@
 
 CONFIG_DIR=${XDG_CONFIG_DIR:-$HOME/.config}
 
-## Creating symlinks
+## Creating symlinks for directories
 
-for dirname in $(find ./config/* -type d -depth 0 -exec basename {} \;)
+for dirname in $(find config/* -type d -depth 0 -exec basename {} \;)
 do
     # check if the folder exists
     if [ -d $CONFIG_DIR/$dirname ]; then
@@ -12,8 +12,16 @@ do
         mv $CONFIG_DIR/$dirname $CONFIG_DIR/$dirname-backup-$(date -u +%Y-%m-%d)
     fi
 
-    ln -s $(pwd)/$dirname $CONFIG_DIR/$dirname
-    echo "Created a symlink $CONFIG_DIR/$dirname -> $PWD/$dirname"
+    ln -fs $(pwd)/config/$dirname $CONFIG_DIR/$dirname
+    echo "Created a symlink $CONFIG_DIR/$dirname -> $PWD/config/$dirname"
+done
+
+## standalone config files under ~/.config dir
+
+for filename in $(find config/* -type f -depth 0 -exec basename {} \;)
+do
+    ln -fs $(pwd)/config/$filename $CONFIG_DIR/$filename
+    echo "Created a symlink $CONFIG_DIR/$filename -> $PWD/config/$filename"
 done
 
 ## Individual configurations
@@ -24,5 +32,10 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 ### bash_aliases (assuming there is a default bashrc from Ubuntu, which refers to this file)
 if [ ! -f $HOME/.bash_aliases ]; then
-    ln -s $(pwd)/.bash_aliases $HOME/.bash_aliases
+    ln -s $(pwd)/bash_aliases $HOME/.bash_aliases
+fi
+
+### zshrc
+if [ ! -f $HOME/.zshrc ]; then
+    ln -s $(pwd)/zshrc $HOME/.zshrc
 fi
