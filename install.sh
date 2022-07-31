@@ -4,7 +4,7 @@ CONFIG_DIR=${XDG_CONFIG_DIR:-$HOME/.config}
 
 ## Creating symlinks
 
-for dirname in $(find ./* -type d -depth 0 -exec basename {} \;)
+for dirname in $(find ./config/* -type d -depth 0 -exec basename {} \;)
 do
     # check if the folder exists
     if [ -d $CONFIG_DIR/$dirname ]; then
