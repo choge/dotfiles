@@ -9,6 +9,9 @@ Plug 'chlorm/vim-monokai-truecolor'
 Plug 'cocopon/iceberg.vim'
 Plug 'arcticicestudio/nord-vim'
 
+" Utils
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
 call plug#end()
 
 " Look and feel
@@ -38,3 +41,4 @@ set smartcase
 
 " Editor
 set number
+
