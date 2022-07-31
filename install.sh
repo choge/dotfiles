@@ -4,10 +4,10 @@ CONFIG_DIR=${XDG_CONFIG_DIR:-$HOME/.config}
 
 ## Creating symlinks for directories
 
-for dirname in $(find config/* -type d -depth 0 -exec basename {} \;)
+for dirname in $(find config/* -maxdepth 0 -type d -exec basename {} \;)
 do
-    # check if the folder exists
-    if [ -d $CONFIG_DIR/$dirname ]; then
+    # check if the folder (but not symlink) exists
+    if [ -d $CONFIG_DIR/$dirname -a ! -L $CONFIG_DIR/$dirname ]; then
         echo "$dirname already exists, so back it up"
         mv $CONFIG_DIR/$dirname $CONFIG_DIR/$dirname-backup-$(date -u +%Y-%m-%d)
     fi
@@ -18,7 +18,7 @@ done
 
 ## standalone config files under ~/.config dir
 
-for filename in $(find config/* -type f -depth 0 -exec basename {} \;)
+for filename in $(find config/* -maxdepth 0 -type f -exec basename {} \;)
 do
     ln -fs $(pwd)/config/$filename $CONFIG_DIR/$filename
     echo "Created a symlink $CONFIG_DIR/$filename -> $PWD/config/$filename"
