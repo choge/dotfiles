@@ -5,11 +5,11 @@ Plug 'ervandew/supertab'
 Plug 'sheerun/vim-polyglot'
 
 " Colorschemes
-Plug 'chlorm/vim-monokai-truecolor'
 Plug 'cocopon/iceberg.vim'
-Plug 'arcticicestudio/nord-vim'
 
 " Utils
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 call plug#end()
@@ -42,3 +42,9 @@ set smartcase
 " Editor
 set number
 
+" Plugin configurations - vim-airline
+let g:airline_experimental = 1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
