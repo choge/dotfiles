@@ -41,6 +41,7 @@ set smartcase
 
 " Editor
 set number
+set mouse+=a
 
 " Plugin configurations - vim-airline
 let g:airline_experimental = 1
