@@ -27,8 +27,6 @@ include /etc/sway/config-vars.d/*
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg $XDG_DATA_HOME/backgrounds/default.jpg fill
 
-# Rotate the sub display
-#output HDMI-A-1 transform 90
 #
 # Example configuration:
 #
