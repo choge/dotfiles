@@ -1,0 +1,66 @@
+{
+    "layer": "bottom", // Waybar must be at the bottom so that I can see dmenu
+    "modules-left": ["sway/workspaces", "sway/mode", "custom/song"],
+    "modules-center": ["sway/window"],
+    "modules-right": ["memory", "pulseaudio", "tray", "clock"],
+    // "modules-right": ["tray", "cpu", "memory", "backlight", "network", "pulseaudio", "battery", "clock"],
+    "tray": {
+        "icon-size": 21,
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "{:%Y-%m-%d | %H:%M}",
+        "format-alt": "{:%Y-%m-%d}",
+        "format": "  {:%a %Y-%m-%d %l:%M %p}"
+    },
+    "cpu": {
+        "format": " {usage}%"
+    },
+    "memory": {
+        "format": " {}%"
+    },
+    "backlight": {
+        "format": " {percent}%",
+        "format-icons": ["", ""]
+    },
+    "battery": {
+        "format": "　{capacity}%"
+    },
+    "network": {
+        "format-wifi": "　{signalStrength}%",
+        "format-ethernet": " {ipaddr}/{cidr} ({ifname})",
+        "format-disconnected": "⚠"
+    },
+    "pulseaudio": {
+        "format": " {volume}%",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": "",
+        "format-icons": {
+            "headphones": "",
+            "handsfree": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+
+    "sway/window": {
+        "format": "{}",
+        "rewrite": {
+            "(.*) - Vivaldi": "  $1",
+            "nvim (.*)": "  $1",
+            "(.*) - Visual Studio Code": "  $1"
+        }
+    },
+
+    "custom/song": {
+        "format": "{icon} {}",
+        "interval": 10,
+        "exec": "playerctl metadata --format '{{status}} - {{title}} by {{artist}}'",
+        "on-click": "playerctl play-pause",
+        "return-type": "json",
+    }
+}
