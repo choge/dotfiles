@@ -18,6 +18,8 @@ Softwares to use
 
 A list of some softwares that I prefer using:
 
+* [sway](https://github.com/swaywm/sway) is a window manager (for Linux)
+* [waybar](https://github.com/Alexays/Waybar) is a bar tool for wayland (and thus sway)
 * [starship](https://starship.rs) for shell prompt
 * [lsd](https://github.com/Peltoche/lsd) as an alternative of `ls`
 * [bat](https://github.com/sharkdp/bat) as an alternative of `cat`

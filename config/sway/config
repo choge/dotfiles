@@ -18,17 +18,17 @@ set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi --show drun --allow-images | xargs swaymsg exec --
 
 include /etc/sway/config-vars.d/*
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg ~/Pictures/Wallpapers/firewatch.png fill
+# output * bg $XDG_DATA_HOME/backgrounds/default.jpg fill
 
 # Rotate the sub display
-output HDMI-A-1 transform 90
+#output HDMI-A-1 transform 90
 #
 # Example configuration:
 #
@@ -213,6 +213,7 @@ bar {
 }
 
 include /etc/sway/config.d/*
+include $(hostname).config
 
 # Launch fcitx
 exec fcitx5 -d
