@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-CONFIG_DIR=${XDG_CONFIG_DIR:-$HOME/.config}
+CONFIG_DIR=${XDG_CONFIG_HOME:-$HOME/.config}
 
 ## Creating symlinks for directories
 
@@ -12,9 +12,13 @@ do
         mv $CONFIG_DIR/$dirname $CONFIG_DIR/$dirname-backup-$(date -u +%Y-%m-%d)
     fi
 
-    ln -fs $(pwd)/config/$dirname $CONFIG_DIR/$dirname
-    echo "Created a symlink $CONFIG_DIR/$dirname -> $PWD/config/$dirname"
+    if [ ! -L $CONFIG_DIR/$dirname ]; then
+        ln -fs $(pwd)/config/$dirname $CONFIG_DIR/$dirname
+        echo "Created a symlink $CONFIG_DIR/$dirname -> $PWD/config/$dirname"
+    fi
 done
+
+git status
 
 ## standalone config files under ~/.config dir
 
