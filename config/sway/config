@@ -213,5 +213,13 @@ bar {
 include /etc/sway/config.d/*
 include $(hostname).config
 
+gaps inner 6
+
 # Launch fcitx
 exec fcitx5 -d
+
+# Swaylock
+exec swayidle -w \
+	timeout 120 'swaylock -f' \
+	timeout 1805 'swaymsg "output * dpms off"' \
+	resume 'swaymsg "output * dpms on"'
