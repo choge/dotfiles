@@ -36,6 +36,11 @@ if [ ! -f $HOME/.bash_aliases ]; then
 fi
 
 ### zshrc
+if [ ! -f $HOME/.bashrc ]; then
+    ln -s $(pwd)/bashrc $HOME/.bashrc
+fi
+
+### zshrc
 if [ ! -f $HOME/.zshrc ]; then
     ln -s $(pwd)/zshrc $HOME/.zshrc
 fi
