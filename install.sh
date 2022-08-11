@@ -44,3 +44,4 @@ fi
 if [ ! -f $HOME/.zshrc ]; then
     ln -s $(pwd)/zshrc $HOME/.zshrc
 fi
+
