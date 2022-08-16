@@ -24,8 +24,9 @@
 
 window {
     opacity: 0.9;
-    border:  0px;
-    border-radius: 10px;
+    border:  2px;
+    border-color: @base03;
+    border-radius: 25px;
     font-family: 'Operator Mono Light', monospace;
     font-size: 18px;
 }
