@@ -40,11 +40,11 @@ exec_always --no-startup-id fcitx5 -d &
 ## Picom = window manager
 exec_always --no-startup-id picom &
 
-## nitrogen for wallpapers
-exec_always --no-startup-id nitrogen --restore &
-
 ## Polybar
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id bash $HOME/.config/polybar/launch.sh --forest
+
+## nitrogen for wallpapers
+exec_always --no-startup-id nitrogen --restore
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -204,6 +204,7 @@ default_border pixel 1
 default_floating_border pixel 1
 
 # PyWAL
+# See: https://github.com/dylanaraps/pywal/wiki/Customization#i3
 set_from_resource $fg i3wm.color7 #f0f0f0
 set_from_resource $bg i3wm.color2 #f0f0f0
 
