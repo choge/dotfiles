@@ -44,8 +44,11 @@ set number
 set mouse+=a
 
 " Plugin configurations - vim-airline
+" Memo: Those glyphs are located around U+E0B0 - U+E0D4
 let g:airline_experimental = 1
-let g:airline_left_sep = ''
+let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
-let g:airline_right_sep = ''
+let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
+
+hi Normal guibg=NONE ctermbg=NONE
