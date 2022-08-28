@@ -5,7 +5,7 @@ Plug 'ervandew/supertab'
 Plug 'sheerun/vim-polyglot'
 
 " Colorschemes
-Plug 'cocopon/iceberg.vim'
+Plug 'rafi/awesome-vim-colorschemes'
 
 " Utils
 Plug 'vim-airline/vim-airline'
@@ -17,7 +17,7 @@ call plug#end()
 " Look and feel
 set termguicolors
 set background=dark
-colorscheme iceberg
+colorscheme stellarized
 
 " Editing
 set tabstop=4
@@ -50,5 +50,3 @@ let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-
-hi Normal guibg=NONE ctermbg=NONE
