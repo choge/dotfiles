@@ -15,16 +15,16 @@ window#waybar {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 #workspaces button {
     margin: 0 5px;
-    background: transparent;
+    background: #4C566A;
     color: #ffffff;
-    border-bottom: 3px solid transparent;
+    /* border-bottom: 3px solid transparent; */
     border-radius: 10px;
 }
 
 #workspaces button.focused {
-    color: #3B4B52;
-    background: #8FBCBB;
-    border-bottom: 3px solid #e5e9f0;
+    color: #81A1C1;
+    background: #2E3440;
+    /* border-bottom: 3px solid #e5e9f0; */
 }
 
 #workspaces button.urgent {
