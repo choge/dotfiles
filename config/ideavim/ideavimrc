@@ -1,0 +1,15 @@
+set ideajoin
+
+set clipboard+=ideaput,unnamed
+
+" Searching
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" Editor
+set number
+
+" Mappings
+map \d <Action>(QuickJavaDoc)
