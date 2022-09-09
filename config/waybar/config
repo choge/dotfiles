@@ -2,7 +2,7 @@
     "layer": "bottom", // Waybar must be at the bottom so that I can see dmenu
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["sway/window"],
-    "modules-right": ["network", "cpu", "memory", "pulseaudio", "tray", "clock"],
+    "modules-right": ["network", "cpu", "memory", "pulseaudio", "tray", "custom/wlogout", "clock"],
     // "modules-right": ["tray", "cpu", "memory", "backlight", "network", "pulseaudio", "battery", "clock"],
     "tray": {
         "icon-size": 21,
@@ -81,5 +81,14 @@
         "on-scroll-up": "playerctl next",
         "on-scroll-down": "playerctl previous",
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null", // Script in resources/custom_modules folder
+    },
+
+    "custom/wlogout": {
+    	"tooltip": true,
+        "tooltip-format": "shutdown/logout",
+        "format": "⏻ ",
+        "interval": "once",
+        "on-click": "wlogout -p layer-shell",
     }
+
 }
