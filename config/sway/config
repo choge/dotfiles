@@ -226,3 +226,5 @@ exec swayidle -w \
 	timeout 1800 'swaylock -f' \
 	timeout 1805 'swaymsg "output * dpms off"' \
 	resume 'swaymsg "output * dpms on"'
+
+exec /home/choge/.config/sway/change_bg.sh
