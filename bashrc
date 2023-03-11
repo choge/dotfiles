@@ -16,6 +16,9 @@ export XMODIFIERS=@im=fcitx
 export QT_QPA_PLATFORM="wayland;xcb"
 export _JAVA_AWT_WM_NONREPARENTING=1
 export XMODIFIERS=@im=fcitx
+
+export PATH=$HOME/.cargo/bin:$HOME/.local/bin:$PATH
+
 #if [ -z $DISPLAY ] && [ "$(tty)" == "/dev/tty1" ]; then
 #    exec sway
 #fi
