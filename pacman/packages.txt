@@ -1,0 +1,51 @@
+## Network
+## (networkmanager should be really installed at the initial installation)
+networkmanager
+bluez-utils
+
+## terminal emulator
+kitty
+alacritty
+
+## input method
+fcitx5-mozc
+fcitx5-gtk
+fcitx5-qt
+fcitx5-configtool
+fcitx5-nord
+
+## Browser
+firefox
+
+## fonts
+noto-fonts-cjk
+ttf-nerd-fonts-symbols-1000-em
+
+## Utilities
+lsd
+bat
+tealdeer
+jq
+ripgrep
+starship
+imagemagick
+bash-completion
+
+## Dev dependencies
+### AWS
+aws-cli-v2
+aws-vault
+
+### Git
+git
+github-cli
+
+### Kubernetes
+kubectl
+kubectx
+argocd
+
+### programming languages
+nodejs
+go
+rustup
