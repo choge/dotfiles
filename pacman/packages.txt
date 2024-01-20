@@ -26,6 +26,7 @@ noto-fonts-cjk
 ttf-nerd-fonts-symbols
 
 ## Utilities
+base-devel
 lsd
 bat
 tealdeer
@@ -53,3 +54,7 @@ argocd
 nodejs
 go
 rustup
+
+### Applications
+obsidian
+

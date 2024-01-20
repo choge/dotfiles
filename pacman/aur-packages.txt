@@ -2,4 +2,5 @@
 1password-cli
 exercism
 paru
+slack-desktop
 visual-studio-code-bin
