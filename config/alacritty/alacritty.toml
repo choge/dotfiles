@@ -1,0 +1,18 @@
+[font.bold]
+family = "DankMono"
+style = "Bold"
+
+[font.bold_italic]
+family = "DankMono"
+style = "Bold Italic"
+
+[font.italic]
+family = "DankMono"
+style = "Italic"
+
+[font.normal]
+family = "DankMono"
+style = "Regular"
+
+[shell]
+program = "/usr/bin/nu"
