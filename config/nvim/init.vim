@@ -3,6 +3,7 @@ call plug#begin(stdpath('data') . '/plugged')
 " Completion
 Plug 'ervandew/supertab'
 Plug 'sheerun/vim-polyglot'
+Plug 'github/copilot.vim'
 
 " Colorschemes
 Plug 'rafi/awesome-vim-colorschemes'
@@ -42,6 +43,7 @@ set smartcase
 " Editor
 set number
 set mouse+=a
+set clipboard+=unnamedplus
 
 " Plugin configurations - vim-airline
 " Memo: Those glyphs are located around U+E0B0 - U+E0D4
