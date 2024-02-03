@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm'
+local act = wezterm.action
 
 function detect_os()
     local os = io.popen('uname -s'):read('*l')
@@ -47,7 +48,12 @@ local base_config = {
         style  = "Normal",
         harfbuzz_features = {'calt', 'liga', 'dlig', 'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'ss07', 'ss08'},
     }),
-    font_size = 14.0
+    font_size = 14.0,
+
+    keys = {
+        { key = 'V', mods = 'CTRL', action = act.PasteFrom 'Clipboard' },
+        { key = 'C', mods = 'CTRL', action = act.CopyTo 'Clipboard' },
+    }
 }
 
 
