@@ -4,8 +4,10 @@ autoload -U compinit
 compinit
 
 alias icat='kitty +kitten icat'
+alias ls=lsd
+
+export PATH=$HOME/.local/bin:$HOME/go/bin:$PATH
 
 eval "$(starship init zsh)"
+eval "$(mise activate zsh)"
 
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /snap/terraform/400/terraform terraform
