@@ -10,8 +10,10 @@
 # Start sway
 export MOZ_ENABLE_WAYLAND=1
 export XDG_SESSION_TYPE=wayland
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
+# Disabled according to this
+#  https://fcitx-im.org/wiki/Using_Fcitx_5_on_Wayland#KDE_Plasma
+#export GTK_IM_MODULE=fcitx
+#export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 export QT_QPA_PLATFORM="wayland;xcb"
 export _JAVA_AWT_WM_NONREPARENTING=1
@@ -24,3 +26,7 @@ export PATH=$HOME/.cargo/bin:$HOME/.local/bin:$PATH
 #fi
 
 eval "$(starship init bash)"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
