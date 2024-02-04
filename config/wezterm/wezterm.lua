@@ -36,7 +36,7 @@ local hostname = detect_host()
 -- ------------------------------------------------------------
 local base_config = {
     window_background_opacity = 0.9,
-    color_scheme ='Atelierdune (dark) (terminal.sexy)',
+    color_scheme ='Atelierforest (light) (terminal.sexy)',
 
     font = wezterm.font({
         -- family='Monaspace Neon',
