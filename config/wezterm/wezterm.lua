@@ -64,7 +64,7 @@ local os_specific = {}
 
 local host_specific = {
     ['ser6'] = {
-        font_size = 13.0
+        font_size = 12.0
     }
 }
 
