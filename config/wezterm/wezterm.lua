@@ -36,11 +36,11 @@ local hostname = detect_host()
 -- ------------------------------------------------------------
 local base_config = {
     window_background_opacity = 0.9,
-    color_scheme ='Atelierforest (light) (terminal.sexy)',
+    color_scheme ='GitHub Dark',
 
     font = wezterm.font({
-        -- family='Monaspace Neon',
-        family='Monaspace Argon',
+        family='Monaspace Neon',
+        -- family='Monaspace Argon',
         -- family='Monaspace Xenon',
         -- family='Monaspace Radon',
         -- family='Monaspace Krypton',
